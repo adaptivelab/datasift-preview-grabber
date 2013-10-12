@@ -8,7 +8,7 @@ Quick Start
 
 If you have Python and virtualenv installed, the simplest way to get set up is to
 clone or download all the source files, cd into the directory and then run these
-commands for the first time:
+commands for first time:
 
     $ virtualenv .env
     $ source .env/bin/activate
@@ -39,6 +39,7 @@ If you want to enhance the script in some way, install the libraries from the
 test_requirements.txt in the virtualenv you created earlier and make sure the
 tests all pass before adding something new:
 
+    $ pip install -r test_requirements.txt
     $ nosetests
 
 If it's useful, send it back to us in the form of a pull request on Github!
