@@ -1,0 +1,5 @@
+datasift_preview_grabber.log
+dist
+build
+.env
+datasift_preview_grabber.egg-info
