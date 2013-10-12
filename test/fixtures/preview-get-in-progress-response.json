@@ -1,0 +1,14 @@
+{
+    "id": "8d38093ce3a78fbbba6f",
+    "name": "preview",
+    "progress": 5,
+    "status": "running",
+    "feeds": "twitter",
+    "sample": 1,
+    "end": 1359936000,
+    "created_at": 1362409489,
+    "start": 1359849600,
+    "user": "12919",
+    "parameters": "interaction.content,wordCount,10",
+    "hash": "93558e17de15072fa126370c37c5bd8f"
+}
