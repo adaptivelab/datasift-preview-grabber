@@ -54,7 +54,7 @@ class PreviewStatsCommand(object):
 
 class GetPreviewStatsTask(object):
 
-    def __init__(self, datasift_user, start, end, stream_hash, timeout=5):
+    def __init__(self, datasift_user, start, end, stream_hash, timeout=30):
         self.datasift_user = datasift_user
         self.start = start
         self.end = end
@@ -72,6 +72,9 @@ class GetPreviewStatsTask(object):
         logger.info("Creating preview, parameters are {0}".format(
             parameters))
         response = self.datasift_user.call_api("preview/create", parameters)
+        logger.info("Rate limit: {1} remaining (of {0})".format(
+                    self.datasift_user.get_rate_limit(),
+                    self.datasift_user.get_rate_limit_remaining()))
         logger.info("Create preview response was {0}".format(response))
         self._id = response["id"]
 
@@ -83,6 +86,9 @@ class GetPreviewStatsTask(object):
         }
         while True:
             response = self.datasift_user.call_api("preview/get", parameters)
+            logger.info("Rate limit: {1} remaining (of {0})".format(
+                    self.datasift_user.get_rate_limit(),
+                    self.datasift_user.get_rate_limit_remaining()))
             if response["status"] in ["queued", "prep", "submitted"]:
                 logger.info("Preview task status: {0}".format(response["status"]))
             elif response["status"] == "running":
