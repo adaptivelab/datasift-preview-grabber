@@ -4,11 +4,11 @@ Datasift Preview Grabber
 A script to fetch datasift preview stats for a particular hash, over a particular date range.
 
 Quick Start
-------------
+-----------
 
 If you have Python and virtualenv installed, the simplest way to get set up is to
 clone or download all the source files, cd into the directory and then run these
-commands for first time:
+commands for first time:::
 
     $ virtualenv .env
     $ source .env/bin/activate
@@ -17,7 +17,9 @@ commands for first time:
 That will install everything you need to run the script.
 
 Running the Script
------------------
+------------------
+
+::
 
     Usage: datasift_preview_grabber <start_date> <end_date> <stream_hash> <datasift-username> <datasift-apikey>
 
