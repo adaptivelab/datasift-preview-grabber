@@ -39,7 +39,7 @@ Developing the Script Further
 
 If you want to enhance the script in some way, install the libraries from the
 test_requirements.txt in the virtualenv you created earlier and make sure the
-tests all pass before adding something new:
+tests all pass before adding something new:::
 
     $ pip install -r test_requirements.txt
     $ nosetests
